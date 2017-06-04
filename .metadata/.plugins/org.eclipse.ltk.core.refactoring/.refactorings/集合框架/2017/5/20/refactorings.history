@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com._520it._day02_set.LinkendHashSetDemo.java&apos; to &apos;LinkedHashSetDemo.java&apos;&#x0D;&#x0A;- Original project: &apos;集合框架&apos;&#x0D;&#x0A;- Original element: &apos;com._520it._day02_set.LinkendHashSetDemo.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com._520it._day02_set.LinkedHashSetDemo.java&apos;" description="Rename compilation unit &apos;LinkendHashSetDemo.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com._520it._day02_set{LinkendHashSetDemo.java" name="LinkedHashSetDemo.java" references="false" stamp="1494833873188" version="1.0"/>
+</session>

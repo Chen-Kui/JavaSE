@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com._520it_02_03_Thread.ThreadDemo&apos; to &apos;SleepDemo&apos;&#x0D;&#x0A;- Original project: &apos;线程和并发&apos;&#x0D;&#x0A;- Original element: &apos;com._520it_02_03_Thread.ThreadDemo&apos;&#x0D;&#x0A;- Renamed element: &apos;com._520it_02_03_Thread.SleepDemo&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ThreadDemo&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com._520it_02_03_Thread{ThreadDemo.java[ThreadDemo" matchStrategy="1" name="SleepDemo" qualified="false" references="true" similarDeclarations="false" stamp="1492344065723" textual="false" version="1.0"/>
+</session>

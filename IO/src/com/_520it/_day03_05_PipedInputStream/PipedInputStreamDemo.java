@@ -1,0 +1,64 @@
+package com._520it._day03_05_PipedInputStream;
+
+import java.io.IOException;
+import java.io.PipedInputStream;
+import java.io.PipedOutputStream;
+
+//A线程发送数据到B线程
+class AThread extends Thread {
+	private PipedOutputStream out = new PipedOutputStream();
+
+	public PipedOutputStream getOut() {
+		return out;
+	}
+
+	public void run() {
+
+		try {
+			for (int i = 65; i < 65 + 26; i++) {
+				out.write(i);
+			}
+			out.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+}
+
+// B线程接受数据
+class BThread extends Thread {
+	/**
+	 * PipedInputStream(PipedOutputStream src) 创建 PipedInputStream，使其连接到管道输出流
+	 * src。
+	 */
+	 PipedInputStream in = null;
+
+	public BThread(AThread athread) throws Exception {
+		in = new PipedInputStream(athread.getOut());
+	}
+
+	public void run() {
+		int len = -1;
+		try {
+			while ((len = in.read()) != -1) {
+				System.out.println((char) len);
+			}
+			in.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
+
+public class PipedInputStreamDemo {
+	// 管道流PipedInputStream
+	public static void main(String[] args) throws Exception {
+		AThread athread = new AThread();
+		BThread bthread = new BThread(athread);
+		athread.start();
+		bthread.start();
+	}
+}

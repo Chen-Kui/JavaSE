@@ -1,0 +1,22 @@
+package com._520it._01_ip;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+//演示IP操作
+public class InetAddressDemo {
+	public static void main(String[] args) throws Exception {
+		//static InetAddress getByName(String host) 
+        //在给定主机名的情况下确定主机的 IP 地址。 
+		InetAddress ip = InetAddress.getByName("USER-20170319ND");
+		System.out.println(ip);
+		getHostAddress() 
+        //返回 IP 地址字符串（以文本表现形式）。 getHostAddress() 
+
+       //  
+
+		//获取主机名称,getHostName() 获取此 IP 地址的主机名。
+		System.out.println(ip.getHostName());
+		//获取IP地址
+	}
+}

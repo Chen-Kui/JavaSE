@@ -1,0 +1,31 @@
+package com._520it._03_method;
+
+import java.lang.reflect.Method;
+
+//通过反射获取类中的方法
+public class MethodDemo {
+	class User {
+		public void doWork() {
+		}
+
+		public void doWork(String name) {
+		}
+
+		public String sayHello(String name, int age) {
+			return name + "," + age;
+		}
+	}
+
+	public static void main(String[] args) {
+		getAll();
+	}
+	//获取User类中的所有方法
+	private static void getAll() {
+		Class clz = User.class;
+		Method[] m = clz.getMethods();
+		System.out.println(m.length);
+		for (Method method : m) {
+			System.out.println(method);
+		}
+	}
+}
